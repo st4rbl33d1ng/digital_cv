@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Israel Gómez Rogel - CV</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Aaron Israel Gómez Rogel</h1>
+            <p>Desarrollador Web Junior | aaronigruwu@gmail.com | (+52) 777 854 1650</p>
+            <p>Xochitepec, Morelos | <a href="https://github.com/st4rbl33d1ng">GitHub</a></p>
+            <button onclick="toggleDarkMode()">Modo Oscuro</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="perfil">
+            <h2>Perfil Profesional</h2>
+            <p>Soy un desarrollador web apasionado por la tecnología y la innovación, con un enfoque en la creación de soluciones digitales eficientes, escalables y centradas en el usuario. Domino tecnologías modernas como HTML, CSS, JavaScript, React y Node.js, y tengo experiencia en el manejo de bases de datos SQL. Mi objetivo es desarrollar aplicaciones de alto impacto mediante código limpio, optimizado y bien estructurado, contribuyendo al crecimiento de proyectos tecnológicos innovadores. Me caracterizo por mi aprendizaje autodidacta, adaptabilidad y compromiso con la calidad.</p>
+        </section>
+
+        <section id="educacion">
+            <h2>Educación</h2>
+            <div class="education-item">
+                <h3>Preparatoria Técnico en Programación</h3>
+                <p>Colegio de Estudios Científicos y Tecnológicos del Estado – E. Zapata, Morelos | 2022 – 2025</p>
+                <br>
+                <h3>Instituto Tecnologico de Zacatepec (En curso)</h3>
+                <p>Ingenieria en Ciencia de Datos  – Zacatepec, Morelos | 2025 – </p>
+            </div>
+        </section>
+
+        <section id="certificaciones">
+            <h2>Cursos y Certificaciones</h2>
+            <div class="education-item">
+                <h3>Desarrollo Web Full Stack</h3>
+                <p>freeCodeCamp | 2024</p>
+            </div>
+            <div class="education-item">
+                <h3>JavaScript Algorithms and Data Structures</h3>
+                <p>freeCodeCamp | 2023</p>
+            </div>
+            <div class="education-item">
+                <h3>Responsive Web Design</h3>
+                <p>freeCodeCamp | 2023</p>
+            </div>
+            <div class="education-item">
+                <h3>Introducción a Bases de Datos SQL</h3>
+                <p>Platzi | 2023</p>
+            </div>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiencia</h2>
+            <div class="experience-item">
+                <h3>Desarrollador Web (Prácticas Profesionales) - Instituto de Energías Renovables, UNAM</h3>
+                <p>2024 | Temixco, Morelos</p>
+                <ul>
+                    <li>Colaboré en el desarrollo y optimización de sistemas internos utilizando Python y JavaScript, mejorando la eficiencia de procesos tecnológicos para la investigación en energías renovables.</li> <br>
+                    <li>Implementé interfaces de usuario dinámicas con React, mejorando la usabilidad de herramientas internas.</li> <br>
+                    <li>Diseñé y gestioné bases de datos SQL para almacenar y procesar datos de proyectos de investigación.</li> <br>
+
+                </ul>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <ul class="skills-grid">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>MySQL</li>
+                <li>GitHub</li>
+                <li>VS Code</li>
+                <li>Optimización Web</li>
+                <li>Desarrollo de Aplicaciones Web</li>
+            </ul>
+        </section>
+
+        <section id="competencias">
+            <h2>Competencias Clave</h2>
+            <ul>
+                <li>Pensamiento lógico y resolución de problemas complejos</li>
+                <li>Aprendizaje autodidacta y actualización tecnológica constante</li>
+                <li>Trabajo en equipo y colaboración efectiva en entornos multidisciplinarios</li>
+                <li>Atención al detalle y compromiso con la calidad del código</li>
+                <li>Gestión de proyectos con enfoque en plazos y resultados</li>
+                <li>Adaptabilidad y orientación a soluciones innovadoras</li>
+            </ul>
+        </section>
+
+        <section id="idiomas">
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Español - Nativo</li>
+                <li>Inglés - Intermedio (B2)</li>
+            </ul>
+        </section>
+
+        <section id="intereses">
+            <h2>Intereses</h2>
+            <ul>
+                <li>Desarrollo de aplicaciones web innovadoras</li>
+                <li>Inteligencia artificial y aprendizaje automático</li>
+                <li>Contribución a proyectos de código abierto</li>
+                <li>Innovación en energías renovables y sostenibilidad</li>
+            </ul>
+        </section>
+
+        <section id="referencias">
+            <h2>Referencias</h2>
+            <p>Disponibles bajo solicitud.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Última actualización: Julio 2025</p>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Smooth scrolling for section links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in animation on load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.container section').forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    section.style.transition = 'opacity 0.5s, transform 0.5s';
+                    section.style.opacity = 1;
+                    section.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

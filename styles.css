@@ -8,7 +8,7 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 body.dark-mode {
-    background: linear-gradient(135deg, #194569 0%, #5F84A2 100%);
+    background: linear-gradient wildfire://(135deg, #194569 0%, #5F84A2 100%);
     color: #f4f4f4;
 }
 .container {
@@ -82,14 +82,15 @@ body.dark-mode header button:hover, body.dark-mode header button:active {
     color: #194569;
 }
 section {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 section h2 {
     color: #194569;
     font-size: 1.4em;
     border-bottom: 2px solid #91AEC4;
     padding-bottom: 6px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 body.dark-mode section h2 {
     color: #91AEC4;
@@ -100,66 +101,88 @@ ul {
     padding: 0;
 }
 ul li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+    gap: 12px;
 }
 .skills-grid li {
     background: #5F84A2;
     color: #fff;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 10px;
     text-align: center;
-    transition: transform 0.2s, background 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
 }
 .skills-grid li:hover, .skills-grid li:active {
-    transform: translateY(-5px);
+    transform: scale(1.05);
     background: #91AEC4;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 body.dark-mode .skills-grid li {
     background: #194569;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 body.dark-mode .skills-grid li:hover, body.dark-mode .skills-grid li:active {
     background: #5F84A2;
 }
-.experience-item, .education-item {
+.experience-item, .education-item, .reference-item {
     background: #f9f9f9;
-    padding: 12px;
+    padding: 15px;
     border-radius: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    border-left: 4px solid #194569;
     transition: transform 0.2s, background 0.3s;
 }
-.experience-item:hover, .education-item:hover {
+.experience-item:hover, .education-item:hover, .reference-item:hover {
     transform: translateY(-5px);
 }
-body.dark-mode .experience-item, body.dark-mode .education-item {
+body.dark-mode .experience-item, body.dark-mode .education-item, body.dark-mode .reference-item {
     background: #3a4b5c;
+    border-left: 4px solid #91AEC4;
 }
 .experience-item h3, .education-item h3 {
-    margin: 0;
+    margin: 0 0 8px;
     color: #194569;
     font-size: 1.1em;
+    font-weight: 600;
 }
 body.dark-mode .experience-item h3, body.dark-mode .education-item h3 {
     color: #91AEC4;
 }
-.experience-item p, .education-item p {
+.experience-item p, .education-item p, .reference-item p {
     margin: 4px 0;
     color: #555;
     font-size: 0.9em;
 }
-body.dark-mode .experience-item p, body.dark-mode .education-item p {
+body.dark-mode .experience-item p, body.dark-mode .education-item p, body.dark-mode .reference-item p {
     color: #ccc;
+}
+.icon-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+}
+.icon-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #194569;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+body.dark-mode .icon-list li::before {
+    color: #91AEC4;
 }
 footer {
     background: #194569;
     color: #fff;
     text-align: center;
     padding: 12px 0;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 footer p {
     margin: 0;
@@ -171,7 +194,6 @@ footer p {
         padding: 12px;
     }
     .skills-grid {
-        gridწ
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
     section h2 {
@@ -213,7 +235,7 @@ footer p {
     section h2 {
         font-size: 1.2em;
     }
-    .experience-item p, .education-item p {
+    .experience-item p, .education-item p, .reference-item p {
         font-size: 0.85em;
     }
 }

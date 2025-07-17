@@ -34,7 +34,7 @@ header {
     z-index: 1000;
 }
 header .header-content {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 15px;
 }

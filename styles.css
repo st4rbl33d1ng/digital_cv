@@ -8,12 +8,12 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 body.dark-mode {
-    background: linear-gradient wildfire://(135deg, #194569 0%, #5F84A2 100%);
+    background: linear-gradient(135deg, #194569 0%, #5F84A2 100%);
     color: #f4f4f4;
 }
 .container {
     max-width: 900px;
-    margin: 90px auto 15px;
+    margin: 60px auto 15px; /* Reducido de 90px a 60px */
     padding: 15px;
     background: #fff;
     border-radius: 12px;
@@ -28,7 +28,7 @@ header {
     top: 0;
     width: 100%;
     background: linear-gradient(90deg, #194569 0%, #5F84A2 100%);
-    padding: 8px 0;
+    padding: 5px 0; /* Reducido de 8px a 5px */
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 1000;
@@ -36,39 +36,39 @@ header {
 header .header-content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 10px; /* Reducido de 15px a 10px */
 }
 header h1 {
     margin: 0;
     color: #fff;
-    font-size: 1.4em;
+    font-size: 1.2em; /* Reducido de 1.4em a 1.2em */
 }
 header p {
     margin: 2px 0;
     color: #91AEC4;
-    font-size: 0.85em;
+    font-size: 0.8em; /* Reducido de 0.85em a 0.8em */
 }
 header a {
     color: #91AEC4;
     text-decoration: none;
-    margin: 0 8px;
-    padding: 5px;
+    margin: 0 6px; /* Reducido de 8px a 6px */
+    padding: 4px; /* Reducido de 5px a 4px */
     display: inline-block;
 }
 header a:hover, header a:active {
     color: #fff;
 }
 header button {
-    margin-top: 5px;
-    padding: 6px 16px;
+    margin-top: 4px; /* Reducido de 5px a 4px */
+    padding: 5px 12px; /* Reducido de 6px 16px a 5px 12px */
     background: #5F84A2;
     color: #fff;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 0.85em;
-    min-width: 44px;
-    min-height: 44px;
+    font-size: 0.8em; /* Reducido de 0.85em a 0.8em */
+    min-width: 40px; /* Reducido de 44px a 40px */
+    min-height: 40px; /* Reducido de 44px a 40px */
     transition: background 0.3s;
 }
 header button:hover, header button:active {
@@ -190,7 +190,7 @@ footer p {
 }
 @media (max-width: 768px) {
     .container {
-        margin: 80px 12px 12px;
+        margin: 50px 12px 12px; /* Reducido de 80px a 50px */
         padding: 12px;
     }
     .skills-grid {
@@ -202,56 +202,68 @@ footer p {
     .experience-item h3, .education-item h3 {
         font-size: 1em;
     }
+    header h1 {
+        font-size: 1.1em; /* Reducido de 1.2em a 1.1em */
+    }
+    header p {
+        font-size: 0.75em; /* Reducido de 0.8em a 0.75em */
+    }
+    header button {
+        padding: 4px 10px; /* Reducido de 5px 12px a 4px 10px */
+        font-size: 0.75em; /* Reducido de 0.8em a 0.75em */
+    }
 }
 @media (max-width: 600px) {
     .container {
-        margin: 70px 10px 10px;
+        margin: 50px 10px 10px; /* Reducido de 70px a 50px */
         padding: 10px;
     }
     .skills-grid {
         grid-template-columns: 1fr;
     }
     header h1 {
-        font-size: 1.2em;
+        font-size: 1em; /* Reducido de 1.2em a 1em */
     }
     header p {
-        font-size: 0.8em;
-    }
-    header button {
-        padding: 5px 12px;
-        font-size: 0.8em;
-    }
-}
-@media (max-width: 480px) {
-    header .header-content {
-        padding: 0 10px;
-    }
-    header h1 {
-        font-size: 1.1em;
-    }
-    header p {
-        font-size: 0.75em;
-    }
-    section h2 {
-        font-size: 1.2em;
-    }
-    .experience-item p, .education-item p, .reference-item p {
-        font-size: 0.85em;
-    }
-}
-@media (max-width: 320px) {
-    header h1 {
-        font-size: 1em;
-    }
-    header p {
-        font-size: 0.7em;
+        font-size: 0.7em; /* Reducido de 0.8em a 0.7em */
     }
     header button {
         padding: 4px 10px;
         font-size: 0.75em;
     }
+}
+@media (max-width: 480px) {
+    header .header-content {
+        padding: 0 8px; /* Reducido de 10px a 8px */
+    }
+    header h1 {
+        font-size: 0.9em; /* Reducido de 1.1em a 0.9em */
+    }
+    header p {
+        font-size: 0.65em; /* Reducido de 0.75em a 0.65em */
+    }
+    header button {
+        padding: 3px 8px; /* Reducido de 4px 10px a 3px 8px */
+        font-size: 0.7em; /* Reducido de 0.75em a 0.7em */
+    }
     .container {
-        margin: 60px 8px 8px;
+        margin: 45px 8px 8px; /* Reducido de 60px a 45px */
+        padding: 8px;
+    }
+}
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 0.85em; /* Reducido de 1em a 0.85em */
+    }
+    header p {
+        font-size: 0.6em; /* Reducido de 0.7em a 0.6em */
+    }
+    header button {
+        padding: 3px 8px;
+        font-size: 0.65em; /* Reducido de 0.75em a 0.65em */
+    }
+    .container {
+        margin: 40px 8px 8px; /* Reducido de 60px a 40px */
         padding: 8px;
     }
 }

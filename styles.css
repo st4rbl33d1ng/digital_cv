@@ -13,8 +13,8 @@ body.dark-mode {
 }
 .container {
     max-width: 900px;
-    margin: 100px auto 20px;
-    padding: 20px;
+    margin: 90px auto 15px;
+    padding: 15px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -28,7 +28,7 @@ header {
     top: 0;
     width: 100%;
     background: linear-gradient(90deg, #194569 0%, #5F84A2 100%);
-    padding: 10px 0;
+    padding: 8px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 1000;
@@ -36,25 +36,26 @@ header {
 header .header-content {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 header h1 {
     margin: 0;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 header p {
-    margin: 3px 0;
+    margin: 2px 0;
     color: #91AEC4;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 header a {
     color: #91AEC4;
     text-decoration: none;
     margin: 0 8px;
-    transition: color 0.3s;
+    padding: 5px;
+    display: inline-block;
 }
-header a:hover {
+header a:hover, header a:active {
     color: #fff;
 }
 header button {
@@ -65,28 +66,30 @@ header button {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    min-width: 44px;
+    min-height: 44px;
     transition: background 0.3s;
 }
-header button:hover {
+header button:hover, header button:active {
     background: #91AEC4;
 }
 body.dark-mode header button {
     background: #91AEC4;
 }
-body.dark-mode header button:hover {
+body.dark-mode header button:hover, body.dark-mode header button:active {
     background: #fff;
     color: #194569;
 }
 section {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 section h2 {
     color: #194569;
-    font-size: 1.5em;
+    font-size: 1.4em;
     border-bottom: 2px solid #91AEC4;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
 }
 body.dark-mode section h2 {
     color: #91AEC4;
@@ -97,36 +100,36 @@ ul {
     padding: 0;
 }
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
 }
 .skills-grid li {
     background: #5F84A2;
     color: #fff;
-    padding: 12px;
+    padding: 10px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.2s, background 0.3s;
 }
-.skills-grid li:hover {
+.skills-grid li:hover, .skills-grid li:active {
     transform: translateY(-5px);
     background: #91AEC4;
 }
 body.dark-mode .skills-grid li {
     background: #194569;
 }
-body.dark-mode .skills-grid li:hover {
+body.dark-mode .skills-grid li:hover, body.dark-mode .skills-grid li:active {
     background: #5F84A2;
 }
 .experience-item, .education-item {
     background: #f9f9f9;
-    padding: 15px;
+    padding: 12px;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     transition: transform 0.2s, background 0.3s;
 }
 .experience-item:hover, .education-item:hover {
@@ -138,14 +141,15 @@ body.dark-mode .experience-item, body.dark-mode .education-item {
 .experience-item h3, .education-item h3 {
     margin: 0;
     color: #194569;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 body.dark-mode .experience-item h3, body.dark-mode .education-item h3 {
     color: #91AEC4;
 }
 .experience-item p, .education-item p {
-    margin: 5px 0;
+    margin: 4px 0;
     color: #555;
+    font-size: 0.9em;
 }
 body.dark-mode .experience-item p, body.dark-mode .education-item p {
     color: #ccc;
@@ -154,16 +158,33 @@ footer {
     background: #194569;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+    padding: 12px 0;
+    margin-top: 15px;
 }
 footer p {
     margin: 0;
+    font-size: 0.85em;
+}
+@media (max-width: 768px) {
+    .container {
+        margin: 80px 12px 12px;
+        padding: 12px;
+    }
+    .skills-grid {
+        gridწ
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    section h2 {
+        font-size: 1.3em;
+    }
+    .experience-item h3, .education-item h3 {
+        font-size: 1em;
+    }
 }
 @media (max-width: 600px) {
     .container {
-        margin: 100px 10px 20px;
-        padding: 15px;
+        margin: 70px 10px 10px;
+        padding: 10px;
     }
     .skills-grid {
         grid-template-columns: 1fr;
@@ -177,5 +198,38 @@ footer p {
     header button {
         padding: 5px 12px;
         font-size: 0.8em;
+    }
+}
+@media (max-width: 480px) {
+    header .header-content {
+        padding: 0 10px;
+    }
+    header h1 {
+        font-size: 1.1em;
+    }
+    header p {
+        font-size: 0.75em;
+    }
+    section h2 {
+        font-size: 1.2em;
+    }
+    .experience-item p, .education-item p {
+        font-size: 0.85em;
+    }
+}
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 1em;
+    }
+    header p {
+        font-size: 0.7em;
+    }
+    header button {
+        padding: 4px 10px;
+        font-size: 0.75em;
+    }
+    .container {
+        margin: 60px 8px 8px;
+        padding: 8px;
     }
 }
